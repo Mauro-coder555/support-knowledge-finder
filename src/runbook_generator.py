@@ -70,6 +70,8 @@ def save_runbook(case):
             "success": False,
             "error": "Solo se puede generar runbook para casos resueltos/verificados con causa y solución.",
             "path": None,
+            "content": None,
+            "filename": None,
         }
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -85,4 +87,6 @@ def save_runbook(case):
         "success": True,
         "error": None,
         "path": str(file_path),
+        "content": content,
+        "filename": filename,
     }
